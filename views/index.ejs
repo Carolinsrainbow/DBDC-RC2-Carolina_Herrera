@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+  <form action="/users" method="POST">
+    <input type="text" name="name" placeholder="Ingrese su nombre" id="new-name">
+    <input type="text" name="lastname" placeholder="Ingrese su apellido" id="new-lastname">
+    <input type="email" name="email" placeholder="Ingrese su email" id="new-mail">
+    <input type="password" name="password" placeholder="Ingrese su contraseña" id="new-pass">
+    <button type="submit">Crear usuario</button>
+    <table class=“table”>
+      <thead>
+        <tr>
+          <th scope=“col”>Nombre</th>
+          <th scope=“col”>Apellido</th>
+          <th scope=“col”>Email</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </form>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <!--<script src="./public/js/users.js"></script> -->
+  <script src="/actions/users.js"></script>
+
+</body>
+
+</html>
